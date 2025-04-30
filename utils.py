@@ -201,10 +201,12 @@ def compute_accuracy(model, dataloader, get_confusion_matrix=False, return_proje
     proj_list = np.array([])
 
     correct, total = 0, 0
-    if device == 'cpu':
-        criterion = nn.CrossEntropyLoss()
-    elif "cuda" in device.type:
-        criterion = nn.CrossEntropyLoss().cuda()
+    criterion = nn.CrossEntropyLoss()  #added beeps
+    criterion = criterion.to(device) #added beeps
+    # if device == 'cpu':
+    #     criterion = nn.CrossEntropyLoss()
+    # elif "cuda" in device.type:
+    #     criterion = nn.CrossEntropyLoss().cuda()
     loss_collector = []
     if multiloader:
         for loader in dataloader:
@@ -236,7 +238,9 @@ def compute_accuracy(model, dataloader, get_confusion_matrix=False, return_proje
             for batch_idx, (x, target) in enumerate(dataloader):
                 #print("x:",x)
                 if device != 'cpu':
-                    x, target = x.cuda(), target.to(dtype=torch.int64).cuda()
+                    x = x.to(device)
+                    target = target.to(dtype=torch.int64).to(device) #added beeps
+                    # x, target = x.cuda(), target.to(dtype=torch.int64).cuda()
                 #new
                 _, _, _, _, proj,out = model(x)
                 loss = criterion(out, target)
