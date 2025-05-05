@@ -1,0 +1,37 @@
+CIFAR10 5, 10 clients, 10 local e
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=0.1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=5     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=10     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=5     --logdir='./logs/'     --datadir='./data/'
+
+
+CIFAR10 0.5, 10 clients, 10 local e
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=0.1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=5     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.5     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=10     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.5     --logdir='./logs/'     --datadir='./data/'
+
+
+CIFAR10 0.1, 10 clients, 10 local e
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=10     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=5     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=0.1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+
+CIFAR10 0.1, 50 clients, 5 local e
+python main.py --dataset=cifar10     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=5     --epochs=5    --comm_round=100     --n_parties=50     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+
+
+CIFAR100 0.1, 10 clients, 10 local e
+python main.py --dataset=cifar100     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.5     --logdir='./logs/'     --datadir='./data/'
+
+
+MNIST 0.1, 10 clients, 10 local e
+python main.py --dataset=mnist    --model=simple-cnn     --alg=moon     --lr=0.01     --mu=10     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=mnist     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=5     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=mnist     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+python main.py --dataset=mnist     --model=simple-cnn     --alg=moon     --lr=0.01     --mu=0.1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.1     --logdir='./logs/'     --datadir='./data/'
+
+
+MNIST 0.05, 10 clients, 10 local e
+python main.py --dataset=mnist    --model=simple-cnn     --alg=moon     --lr=0.01     --mu=1     --epochs=10     --comm_round=30     --n_parties=10     --partition=noniid     --beta=0.05     --logdir='./logs/'     --datadir='./data/'
